@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+KR:wght@300;500;900&display=swap');
+*{padding:0; margin:0;}
+a{text-decoration:none; color:#333; font-size:14px;}
+body{color:#333; font-size:14px;}
+img{display:block; max-width:100%;/*부모기준으로 일괄적으로 폭이 맞게 하기 위해서*/}
+ul,ol{list-style:none;}
+
+/* header */
+header{
+    width:100%;
+    height:70px;
+    background-color:#fff;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 0 15px #333;
+    overflow:hidden;
+    position:relative; /*헤더 안에 있는 컨텐츠 정렬 기준*/
+    z-index:999; /*제일 위에 배치 픽스배너보다 제일 위에 배치하기 위해*/
+    text-align:center;/*ul메뉴를 중앙정렬하기 위해*/
+}
+header ul{
+    display:inline-block;/*텍스트얼라인 센터 글자화 하려고*/
+}
+
+header ul li{
+    float:left;
+    margin:0 20px;
+    line-height: 70px;
+
+}
+
+
+header>a{
+    display:block;
+    width:15%;
+    line-height:70px;
+    position:absolute;
+    left:100px;
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:3px;
+}
+
+
+.icon{
+    position:absolute;
+    height:16px;
+    right:100px;
+    top:50%;
+    margin-top: -8px;
+   
+}
+
+.icon a{
+    float:left;
+    margin-left:30px;
+}
+
+
+
+
+/* /header */
+
+#fixbn{
+    width:21%;
+    height:100%;
+    position: fixed;
+    border-right:1px solid #333;
+    text-align:center;
+    left:0;
+    top:0;
+    background-color:white;
+}
+
+#fixbn video{
+    display:block;
+    width:65%;
+    margin: auto;
+    margin-top:200px;
+    margin-bottom:100px;
+    
+}
+#fixbn h2{
+    font-family: 'DM Serif Display', serif;
+    color:rgb(9, 87, 61);
+}
+
+#fixbn p{
+    margin-top:15px;
+    text-decoration:underline;
+}
+
+
+/* contents */
+#contents{
+    width:79%;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+    float:right;
+    /* 왼쪽에 fixed 21%로 배치가 되있기 때문에
+    float:right로 밀어주거나 left:21% 하거나 margin-left:21% 셋 중 하나로 밀어줄수 있음 */
+    
+}
+
+.mainbg{
+    width:90%;
+    margin:auto;
+    margin-top:100px;
+    position:relative;/*보모기준*/
+    /* background-color: aquamarine; 헷갈리면 이거 켜기 */
+    overflow:hidden;
+}
+
+.mainbg img{
+    float:right;/*항상 absolute를 주기보단 이렇게 줄 수 있음*/
+}
+
+
+.text{
+    width:60%;
+    position:absolute;/*absolute를 줘야 그림이랑 겹쳐지니까*/
+    top: 150px;
+    left:0;
+}
+
+
+.text p{
+    font-size: 140px;
+    font-family: 'DM Serif Display', serif;
+    border-bottom: 1px solid #000;
+    line-height:150px;
+    font-style:italic;
+}
+
+.text p::first-letter{
+    font-size:200px;
+}
+
+.text a{
+    font-size:18px;
+    font-weight:200;
+    margin-top:100px;
+    display:block;
+}
+
+
+.Mangazine{
+    width:90%;
+    margin:auto;
+    margin-top:100px;
+    overflow:hidden;
+    /* background-color: pink; */
+}
+
+.Mangazine::before{
+    content: 'Magazine';
+    display:block;/*::before가 글자이기 때문에*/
+    text-align:center;
+    line-height:150px;
+    font-family: 'DM Serif Display', serif;
+    font-size:28px;
+}
+
+.con_bn{
+    width:33.3%;
+    float:left;
+    overflow:hidden;
+}
+
+.con_bn:nth-child(2){
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    box-sizing:border-box;/*border 를 줘서 33.3% 맞으려면 이거 줘야 징 암*/
+}
+
+.con{
+    width:80%;
+    margin:auto;
+    margin-bottom:100px;
+    overflow:hidden;
+    font-size:14px;
+    color:#ccc;
+    font-weight:200;
+}
+
+.con a{
+    font-size:18px;
+    color:#333;
+    font-weight:500;
+    text-decoration:underline;
+    display:block;
+    padding: 30px 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* //contents */
